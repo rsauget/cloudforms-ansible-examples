@@ -1,0 +1,14 @@
+---
+
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: is ruby the latest
+      yum: name=ruby state=present
+
+    - debug: msg="play_hosts={{play_hosts}}"
+
+  become: true
+  
+
+...
